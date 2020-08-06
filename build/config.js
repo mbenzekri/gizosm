@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.config = void 0;
 const unique = (osmitem) => Object.keys(osmitem).length === 1;
 const whatever = () => true;
 function adronly(osmitem) {
-    return Object.keys(osmitem).every((key) => !key.startsWith('addr:'));
+    return Object.keys(osmitem.tags).every((key) => !key.startsWith('addr:'));
 }
 exports.config = {
     name: "STD",
@@ -46,11 +47,6 @@ exports.config = {
         { key: "aerialway", type: 'transport', filter: whatever },
         { key: "ford", type: 'transport', filter: whatever },
         { key: "entrance", type: 'transport', filter: whatever },
-        { key: "addr:housenumber", type: 'trash', filter: adronly },
-        { key: "addr:street", type: 'trash', filter: adronly },
-        { key: "addr:country", type: 'trash', filter: adronly },
-        { key: "addr:postcode", type: 'trash', filter: adronly },
-        { key: "addr:housenumber", type: 'trash', filter: adronly },
         { key: "place", type: 'location', filter: whatever },
         { key: "natural", type: 'location', filter: whatever },
         { key: "housename", type: 'location', filter: whatever },
@@ -61,6 +57,11 @@ exports.config = {
         { key: "leisure", type: 'location', filter: whatever },
         { key: "power", type: 'location', filter: whatever },
         { key: "emergency", type: 'health', filter: whatever },
+        { key: "addr:housenumber", type: 'trash', filter: adronly },
+        { key: "addr:street", type: 'trash', filter: adronly },
+        { key: "addr:country", type: 'trash', filter: adronly },
+        { key: "addr:postcode", type: 'trash', filter: adronly },
+        { key: "addr:housenumber", type: 'trash', filter: adronly },
     ],
 };
 //# sourceMappingURL=config.js.map

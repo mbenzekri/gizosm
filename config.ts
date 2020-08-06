@@ -6,7 +6,7 @@ type FilterKey = (osmitem: OSMItem) => boolean | string;
 const unique = (osmitem: OSMItem) => Object.keys(osmitem).length === 1;
 const whatever = () => true;
 function adronly(osmitem: OSMItem): string | boolean {
-    return Object.keys(osmitem).every((key) => !key.startsWith('addr:'));
+    return Object.keys(osmitem.tags).every((key) => !key.startsWith('addr:'));
 }
 
 export const config = {
