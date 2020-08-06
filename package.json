@@ -1,0 +1,23 @@
+{
+  "name": "gizosm",
+  "version": "1.0.0",
+  "description": "a script to translate osm file into geojson file for gizoff",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "prod": "tsc && node ./build/index.js",
+    "build": "tsc",
+    "debug": "tsc --sourcemap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamed Ben Zekri",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "@types/node-expat": "^2.3.1",
+    "node-expat": "^2.3.18"
+  }
+}
