@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "prod": "tsc && node ./build/index.js",
-    "build": "tsc",
+    "build": "tsc --sourcemap",
     "debug": "tsc --sourcemap",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,10 +14,12 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^14.0.27",
+    "@types/node-expat": "^2.3.1",
     "typescript": "^3.9.7"
   },
   "dependencies": {
-    "@types/node-expat": "^2.3.1",
-    "node-expat": "^2.3.18"
+    "@turf/turf": "^5.1.6",
+    "node-expat": "^2.3.18",
+    "unbzip2-stream": "^1.4.3"
   }
 }

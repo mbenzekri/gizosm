@@ -7,6 +7,19 @@
         {
             "type": "node",
             "request": "launch",
+            "name": "Debug corse",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\build\\index.js",
+            "args": [ "C:\\Work\\data\\osmign\\corse-latest.osm", "C:\\Work\\data\\geo\\corse"],
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
             "name": "Debug ",
             "skipFiles": [
                 "<node_internals>/**"
